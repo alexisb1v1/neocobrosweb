@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoCobros - Gestión de Préstamos, Cobros y Rutas en Tiempo Real</title>
+    <meta name="description" content="La plataforma premium para prestamistas y equipos de cobranza. Automatiza tus cobros diarios, calcula cuotas, planifica rutas inteligentes y controla tus indicadores de riesgo en tiempo real.">
+    <meta name="keywords" content="neocobros, gestión de préstamos, control de cobros, rutas de cobro, simulador de préstamos, cobranza diaria, software financiero">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="NeoCobros - Gestión de Préstamos y Cobros en Tiempo Real">
+    <meta property="og:description" content="Automatiza tus cobros diarios, planifica rutas y controla tus indicadores de riesgo desde cualquier dispositivo.">
+    <meta property="og:image" content="assets/images/dashboard.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="header">
+        <div class="nav-container">
+            <a href="#" class="logo-area">
+                <span class="logo-icon">💰</span>
+                <span class="logo-text">Neo<span class="highlight">Cobros</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Características</a>
+                <a href="#demo" class="nav-link">Capturas</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contáctanos</a>
+                <a href="https://wa.me/51992884054" target="_blank" class="nav-btn btn-whatsapp mobile-only"><i data-lucide="message-circle"></i> Contactar</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/51992884054" target="_blank" class="nav-btn btn-whatsapp desktop-only"><i data-lucide="message-circle"></i> Contactar</a>
+                <button class="hamburger-btn" id="hamburger" aria-label="Abrir menú">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="tagline">
+                    <span class="tag-pulse"></span>
+                    <span class="tag-text">Plataforma Financiera Todo en Uno</span>
+                </div>
+                <h1 class="hero-title">Simplifica la gestión de tus <span class="gradient-text">préstamos</span> y cobros diarios</h1>
+                <p class="hero-subtitle">La solución inteligente para prestamistas independientes y equipos de cobro. Planifica tus rutas, realiza abonos instantáneos y analiza tu rentabilidad en tiempo real.</p>
+                <div class="hero-actions">
+                    <a href="#demo" class="btn btn-hero-primary">Ver Pantallas</a>
+                    <a href="https://wa.me/51992884054" target="_blank" class="btn btn-whatsapp"><i data-lucide="message-circle"></i> Solicitar Demo</a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-number">99.9%</span>
+                        <span class="metric-label">Disponibilidad</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">+20%</span>
+                        <span class="metric-label">Eficiencia de Ruta</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-number">0%</span>
+                        <span class="metric-label">Pérdida de Datos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="device-mockup">
+                    <div class="device-screen">
+                        <img src="assets/images/dashboard.png" alt="NeoCobros Dashboard principal en tiempo real" class="mockup-img">
+                    </div>
+                    <div class="badge-overlay badge-cobros">
+                        <div class="badge-icon"><i data-lucide="trending-up"></i></div>
+                        <div class="badge-info">
+                            <span class="badge-label">Cobrado Hoy</span>
+                            <span class="badge-val">S/ 280.00</span>
+                        </div>
+                    </div>
+                    <div class="badge-overlay badge-seguridad">
+                        <div class="badge-icon"><i data-lucide="shield-check"></i></div>
+                        <div class="badge-info">
+                            <span class="badge-label">Zona Segura</span>
+                            <span class="badge-val">89% al día</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">El control absoluto de tu cobranza</h2>
+                <p class="section-subtitle">Explora las herramientas que optimizan el día a día de tus cobradores y consolidan tu contabilidad administrativa en tiempo real.</p>
+            </div>
+
+            <div class="features-interactive-wrapper">
+                
+                <!-- Columna Izquierda: Pestañas -->
+                <div class="features-tabs-sidebar">
+                    <button class="feature-tab-btn active" data-feature="0">
+                        <i data-lucide="navigation"></i>
+                        <span class="tab-btn-title">Rutas Inteligentes</span>
+                    </button>
+                    <button class="feature-tab-btn" data-feature="1">
+                        <i data-lucide="share-2"></i>
+                        <span class="tab-btn-title">Fichas sin Impresión</span>
+                    </button>
+                    <button class="feature-tab-btn" data-feature="2">
+                        <i data-lucide="wallet"></i>
+                        <span class="tab-btn-title">Registro de Gastos</span>
+                    </button>
+                    <button class="feature-tab-btn" data-feature="3">
+                        <i data-lucide="calendar"></i>
+                        <span class="tab-btn-title">Reportes de Cobro</span>
+                    </button>
+                    <button class="feature-tab-btn" data-feature="4">
+                        <i data-lucide="lock"></i>
+                        <span class="tab-btn-title">Cierre de Caja</span>
+                    </button>
+                    <button class="feature-tab-btn" data-feature="5">
+                        <i data-lucide="pie-chart"></i>
+                        <span class="tab-btn-title">Indicadores Semáforo</span>
+                    </button>
+                </div>
+
+                <!-- Columna Derecha: Panel Visualizador -->
+                <div class="features-display-panel">
+                    
+                    <!-- Panel 0: Rutas Inteligentes -->
+                    <div class="feature-display-content active" id="feat-0">
+                        <div class="display-grid">
+                            <div class="display-info">
+                                <h3 class="display-title">Optimización de Rutas Diarias</h3>
+                                <p class="display-desc">El sistema ordena automáticamente la lista de clientes pendientes en una secuencia lógica según su ubicación, minimizando las paradas innecesarias y reduciendo drásticamente los gastos de transporte.</p>
+                                <ul class="display-bullets">
+                                    <li><i data-lucide="chevron-right"></i> Secuencia inteligente de cobranza</li>
+                                    <li><i data-lucide="chevron-right"></i> Ahorro de combustible y tiempo</li>
+                                    <li><i data-lucide="chevron-right"></i> Buscador rápido por nombre o DNI</li>
+                                </ul>
+                            </div>
+                            <div class="display-visual">
+                                <div class="panel-device">
+                                    <img src="assets/images/ruta_cobro.png" alt="Rutas Inteligentes NeoCobros">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 1: Fichas sin Impresion -->
+                    <div class="feature-display-content" id="feat-1">
+                        <div class="display-grid">
+                            <div class="display-info">
+                                <h3 class="display-title">Fichas de Préstamo por WhatsApp</h3>
+                                <p class="display-desc"><strong>Olvídate de imprimir costosas y frágiles fichas de cartón</strong>. Genera el calendario de cuotas y el historial de pagos digitalmente, y envíaselo a tus clientes por WhatsApp con un solo clic. Un control ecológico, seguro y moderno.</p>
+                                <ul class="display-bullets">
+                                    <li><i data-lucide="chevron-right"></i> Cero gastos en papel e impresiones</li>
+                                    <li><i data-lucide="chevron-right"></i> Envío directo por WhatsApp</li>
+                                    <li><i data-lucide="chevron-right"></i> Historial transparente para el cliente</li>
+                                </ul>
+                            </div>
+                            <div class="display-visual">
+                                <div class="panel-device">
+                                    <img src="assets/images/detalle_pagos.png" alt="Fichas de préstamo digitales">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 2: Registro de Gastos -->
+                    <div class="feature-display-content" id="feat-2">
+                        <div class="display-grid">
+                            <div class="display-info">
+                                <h3 class="display-title">Registro de Gastos Operativos</h3>
+                                <p class="display-desc">Los cobradores pueden declarar al instante cualquier egreso de caja realizado durante el día (combustible, almuerzos, reparaciones de la motocicleta). Esto mantiene sincronizado el saldo neto diario.</p>
+                                <ul class="display-bullets">
+                                    <li><i data-lucide="chevron-right"></i> Registro inmediato desde la app en calle</li>
+                                    <li><i data-lucide="chevron-right"></i> Control y validación administrativa</li>
+                                    <li><i data-lucide="chevron-right"></i> Cálculo exacto de caja neta disponible</li>
+                                </ul>
+                            </div>
+                            <div class="display-visual">
+                                <div class="panel-device">
+                                    <img src="assets/images/dashboard.png" alt="Registro de Gastos NeoCobros">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 3: Reportes por Cobrador -->
+                    <div class="feature-display-content" id="feat-3">
+                        <div class="display-grid">
+                            <div class="display-info">
+                                <h3 class="display-title">Reportes Consolidados de Cobranza</h3>
+                                <p class="display-desc">Accede a filtros administrativos inteligentes que te permiten conocer el rendimiento de cada cobrador asignado. Analiza los montos cobrados en rangos de fechas específicos para planificar tu contabilidad.</p>
+                                <ul class="display-bullets">
+                                    <li><i data-lucide="chevron-right"></i> Filtro por fechas personalizadas</li>
+                                    <li><i data-lucide="chevron-right"></i> Control individual del personal asignado</li>
+                                    <li><i data-lucide="chevron-right"></i> Exportación fácil de resúmenes de pago</li>
+                                </ul>
+                            </div>
+                            <div class="display-visual">
+                                <div class="panel-device">
+                                    <img src="assets/images/registrar_pago.png" alt="Reportes de Cobranza NeoCobros">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 4: Cierre de Caja Diario -->
+                    <div class="feature-display-content" id="feat-4">
+                        <div class="display-grid">
+                            <div class="display-info">
+                                <h3 class="display-title">Cierre de Caja al Final del Día</h3>
+                                <p class="display-desc">Al terminar su recorrido, el cobrador envía su resumen consolidado con un solo clic. El administrador recibe el balance de lo cobrado en efectivo, billeteras digitales (Yape) y egresos declarados.</p>
+                                <ul class="display-bullets">
+                                    <li><i data-lucide="chevron-right"></i> Balance automático de Efectivo vs Yape</li>
+                                    <li><i data-lucide="chevron-right"></i> Cuadre de caja inmediato y sin diferencias</li>
+                                    <li><i data-lucide="chevron-right"></i> Notificación digital de fin de jornada</li>
+                                </ul>
+                            </div>
+                            <div class="display-visual">
+                                <div class="panel-device">
+                                    <img src="assets/images/dashboard.png" alt="Cierres de Caja NeoCobros">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel 5: Indicadores Semáforo -->
+                    <div class="feature-display-content" id="feat-5">
+                        <div class="display-grid">
+                            <div class="display-info">
+                                <h3 class="display-title">Indicadores Visuales de Riesgo</h3>
+                                <p class="display-desc">Toma decisiones de crédito rápidas gracias al sistema semáforo que clasifica los préstamos por colores. Identifica de inmediato a clientes en mora leve o atrasados para priorizar las alertas.</p>
+                                <ul class="display-bullets">
+                                    <li><i data-lucide="chevron-right"></i> Clasificación dinámica de la cartera</li>
+                                    <li><i data-lucide="chevron-right"></i> Colores oficiales: Al día, Atrasado y Vencido</li>
+                                    <li><i data-lucide="chevron-right"></i> Reducción de la mora general del negocio</li>
+                                </ul>
+                            </div>
+                            <div class="display-visual">
+                                <div class="panel-device">
+                                    <img src="assets/images/ruta_cobro.png" alt="Indicadores Semáforo NeoCobros">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Showcase / Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Conoce la interfaz de NeoCobros</h2>
+                <p class="section-subtitle">Explora las pantallas reales de la plataforma. Una interfaz intuitiva, moderna y optimizada para el uso diario en movilidad.</p>
+            </div>
+
+            <div class="showcase-carousel-wrapper">
+                <div class="showcase-slider">
+                    
+                    <!-- Slide 1: Login -->
+                    <div class="showcase-slide active" data-slide="0">
+                        <div class="showcase-grid">
+                            <div class="showcase-image-container">
+                                <img src="assets/images/login.png" alt="Pantalla de inicio de sesion segura" class="showcase-img">
+                            </div>
+                            <div class="showcase-info">
+                                <span class="step-num">01</span>
+                                <h3 class="showcase-title">Acceso Seguro</h3>
+                                <p class="showcase-desc">Panel de control protegido para cada cobrador y administrador. Inicio de sesión rápido y optimizado para proteger los datos financieros de tu negocio en todo momento.</p>
+                                <ul class="showcase-bullets">
+                                    <li><i data-lucide="check-circle-2"></i> Autenticación cifrada</li>
+                                    <li><i data-lucide="check-circle-2"></i> Persistencia de sesión (Recuérdame)</li>
+                                    <li><i data-lucide="check-circle-2"></i> Roles de usuario administradores y cobradores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Dashboard -->
+                    <div class="showcase-slide" data-slide="1">
+                        <div class="showcase-grid">
+                            <div class="showcase-image-container">
+                                <img src="assets/images/dashboard.png" alt="Resumen diario de cobros" class="showcase-img">
+                            </div>
+                            <div class="showcase-info">
+                                <span class="step-num">02</span>
+                                <h3 class="showcase-title">Resumen y Cierre de Caja</h3>
+                                <p class="showcase-desc">El cobrador visualiza la caja en tiempo real y, al finalizar el día, envía su resumen consolidado de ingresos (Efectivo/Yape) y gastos operativos registrados para un cierre de caja automático.</p>
+                                <ul class="showcase-bullets">
+                                    <li><i data-lucide="check-circle-2"></i> Envío de resumen diario consolidado</li>
+                                    <li><i data-lucide="check-circle-2"></i> Cuadre rápido de efectivo y billeteras digitales</li>
+                                    <li><i data-lucide="check-circle-2"></i> Reporte transparente de egresos de personal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Ruta de cobros -->
+                    <div class="showcase-slide" data-slide="2">
+                        <div class="showcase-grid">
+                            <div class="showcase-image-container">
+                                <img src="assets/images/ruta_cobro.png" alt="Lista de cobros por cobrar del dia" class="showcase-img">
+                            </div>
+                            <div class="showcase-info">
+                                <span class="step-num">03</span>
+                                <h3 class="showcase-title">Gestión de Ruta en Calle</h3>
+                                <p class="showcase-desc">Accede a la lista ordenada de cobranza diaria con el estado de cuenta en tiempo real. Utiliza el buscador para localizar clientes por nombre o documento de identidad rápidamente.</p>
+                                <ul class="showcase-bullets">
+                                    <li><i data-lucide="check-circle-2"></i> Semáforos de mora dinámicos</li>
+                                    <li><i data-lucide="check-circle-2"></i> Progreso visual de cuotas pagadas</li>
+                                    <li><i data-lucide="check-circle-2"></i> Acceso rápido a registro de pagos y compartir</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Detalle de Pagos -->
+                    <div class="showcase-slide" data-slide="3">
+                        <div class="showcase-grid">
+                            <div class="showcase-image-container">
+                                <img src="assets/images/detalle_pagos.png" alt="Detalle del calendario de cuotas de cliente" class="showcase-img">
+                            </div>
+                            <div class="showcase-info">
+                                <span class="step-num">04</span>
+                                <h3 class="showcase-title">Fichas de Préstamo Digitales</h3>
+                                <p class="showcase-desc">Genera la ficha detallada de pagos del cliente y compártela directamente por WhatsApp. **Ya no necesitas imprimir fichas en papel**: el cliente recibe su historial ecológico y actualizado de inmediato.</p>
+                                <ul class="showcase-bullets">
+                                    <li><i data-lucide="check-circle-2"></i> Compartir historial de pagos por WhatsApp</li>
+                                    <li><i data-lucide="check-circle-2"></i> Cero gasto en impresión de fichas de cartón</li>
+                                    <li><i data-lucide="check-circle-2"></i> Calendario mensual automatizado en tiempo real</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Registrar Pago -->
+                    <div class="showcase-slide" data-slide="4">
+                        <div class="showcase-grid">
+                            <div class="showcase-image-container">
+                                <img src="assets/images/registrar_pago.png" alt="Formulario para abono de cuota" class="showcase-img">
+                            </div>
+                            <div class="showcase-info">
+                                <span class="step-num">05</span>
+                                <h3 class="showcase-title">Abono y Reportes por Cobrador</h3>
+                                <p class="showcase-desc">Registra cobros (Efectivo/Yape) al instante. Todos los abonos de los cobradores se clasifican de forma automática, permitiendo a los administradores generar reportes por rangos de fecha y personal asignado.</p>
+                                <ul class="showcase-bullets">
+                                    <li><i data-lucide="check-circle-2"></i> Reportes detallados por cobrador asignado</li>
+                                    <li><i data-lucide="check-circle-2"></i> Filtros inteligentes por rangos de fecha</li>
+                                    <li><i data-lucide="check-circle-2"></i> Comprobante digital enviado directo por WhatsApp</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <div class="carousel-navigation">
+                    <button class="carousel-arrow prev-arrow" id="prevSlide" aria-label="Pantalla anterior">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="dot active" data-target="0"></span>
+                        <span class="dot" data-target="1"></span>
+                        <span class="dot" data-target="2"></span>
+                        <span class="dot" data-target="3"></span>
+                        <span class="dot" data-target="4"></span>
+                    </div>
+
+                    <button class="carousel-arrow next-arrow" id="nextSlide" aria-label="Pantalla siguiente">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">¿Tienes dudas sobre cómo funciona NeoCobros? Aquí respondemos las dudas más comunes de nuestros usuarios.</p>
+            </div>
+
+            <div class="faq-accordion-wrapper">
+                
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿Cómo puedo instalar la aplicación en mi celular?</span>
+                        <span class="faq-icon"><i data-lucide="chevron-down"></i></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>NeoCobros es una PWA (Progressive Web App). Para instalarla, abre la plataforma en el navegador de tu celular (como Chrome en Android o Safari en iPhone), presiona el menú de opciones y selecciona "Agregar a la pantalla de inicio" o "Instalar aplicación". Tendrás un icono de acceso directo en tu móvil funcionando como una app nativa.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿Los datos de mis clientes y cobros están seguros?</span>
+                        <span class="faq-icon"><i data-lucide="chevron-down"></i></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Absolutamente. Todos los datos son almacenados en bases de datos cifradas y las contraseñas utilizan encriptación de hash robusta. Cada cobrador tiene acceso exclusivamente a su ruta asignada, mientras que el administrador cuenta con el control total de la configuración general e informes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿Cómo funciona el ordenamiento de las rutas de cobro?</span>
+                        <span class="faq-icon"><i data-lucide="chevron-down"></i></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>La plataforma cuenta con un organizador interactivo de rutas de cobro donde los administradores o cobradores pueden priorizar y ordenar a los clientes del día. Esto permite estructurar una lista secuencial de paradas para evitar traslados redundantes y maximizar la efectividad en calle.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>¿Se requiere conexión a Internet permanente para registrar los cobros?</span>
+                        <span class="faq-icon"><i data-lucide="chevron-down"></i></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Para garantizar que los saldos estén sincronizados en tiempo real y que la caja diaria coincida, se requiere acceso a Internet al momento de registrar el pago. Esto evita discrepancias entre lo reportado por el cobrador en la calle y lo visible en el panel del administrador.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-container">
+            <div class="cta-inner">
+                <h2 class="cta-title">¿Listo para digitalizar tu negocio de cobros?</h2>
+                <p class="cta-subtitle">NeoCobros es una solución premium bajo suscripción. Ponte en contacto con nuestro equipo comercial a través de WhatsApp para cotizar planes según tu tamaño de cartera y activar tus accesos al instante.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/51992884054" target="_blank" class="btn btn-whatsapp"><i data-lucide="message-circle"></i> Escríbenos por WhatsApp</a>
+                    <a href="#demo" class="btn btn-cta-secondary">Ver Pantallas reales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo-area">
+                        <span class="logo-icon">💰</span>
+                        <span class="logo-text">Neo<span class="highlight">Cobros</span></span>
+                    </a>
+                    <p class="footer-desc">Plataforma premium para el control de préstamos de capital, gestión de cobros e itinerarios diarios de cobranza en calle.</p>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-title">Plataforma</h4>
+                    <a href="#features" class="footer-link">Características</a>
+                    <a href="#demo" class="footer-link">Capturas reales</a>
+                    <a href="#faq" class="footer-link">Preguntas frecuentes</a>
+                    <a href="#contact" class="footer-link">Contáctanos</a>
+                </div>
+                <div class="footer-links-group">
+                    <h4 class="footer-title">Contacto</h4>
+                    <a href="#" class="footer-link">Soporte técnico</a>
+                    <a href="#" class="footer-link">Contacto comercial</a>
+                    <a href="#" class="footer-link">Preguntas frecuentes</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 NeoCobros. Todos los derechos reservados. Diseñado con excelencia y privacidad.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App Logic Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
