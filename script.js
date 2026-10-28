@@ -136,6 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Si el seleccionado no estaba activo, lo abrimos
             if (!isActive) {
                 item.classList.add('active');
+
+                // Umami Analytics Event
+                if (window.umami && typeof window.umami.track === 'function') {
+                    const questionText = trigger.querySelector('span')?.textContent?.trim() || 'FAQ';
+                    window.umami.track('view_faq_question', { question: questionText });
+                }
             }
         });
     });
@@ -160,6 +166,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetContent = document.getElementById(`feat-${targetIndex}`);
             if (targetContent) {
                 targetContent.classList.add('active');
+            }
+
+            // Umami Analytics Event
+            if (window.umami && typeof window.umami.track === 'function') {
+                const tabTitle = button.querySelector('.tab-btn-title')?.textContent?.trim() || `Tab ${targetIndex}`;
+                window.umami.track('click_feature_tab', { tab: tabTitle });
             }
         });
     });
